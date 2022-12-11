@@ -79,3 +79,10 @@ SELECT nombre,
 FROM empleados
 WHERE salario > 20000 
     OR antiguedad >= DATE '01/01/2022';
+
+--Aplicando todo lo anterior
+SELECT DISTINCT departamento
+FROM empleados
+WHERE antiguedad >= DATE '01/01/2022'
+ORDER BY departamento DESC
+LIMIT 10;
