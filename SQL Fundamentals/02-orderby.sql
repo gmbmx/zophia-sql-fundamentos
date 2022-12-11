@@ -52,7 +52,7 @@ ORDER BY departamento,
 
 --Errores comunes
 
---Orden de los statements
+--Orden de los clauses
 SELECT *
 ORDER BY nombre
 FROM empleados;

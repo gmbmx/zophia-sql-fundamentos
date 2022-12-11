@@ -14,7 +14,7 @@ select * from empleados;
 -- Sigue funcionando, SQL no es Case Sensitive
 seLEct * FroM empleados;
 
---Error, falta un FROM statement
+--Error, falta un FROM clause
 SELECT * empleados;
 
 --Error, nombre de tabla erróneo
