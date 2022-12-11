@@ -1,3 +1,4 @@
+--Presencia de duplicados
 SELECT departamento
 FROM empleados;
 
