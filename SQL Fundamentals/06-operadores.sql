@@ -97,3 +97,21 @@ WHERE nombre LIKE '_a%';
 SELECT nombre
 FROM empleados
 WHERE nombre NOT LIKE 'M%';
+
+--Operadores matemáticos
+SELECT 
+    salario + 500,
+    salario - 500,
+    salario * 2,
+    salario / 2,
+    salario % 10
+FROM empleados;
+
+--Usamos alias para nombrar las nuevas columnas
+SELECT 
+    salario + 500 AS incremento_salario,
+    salario - 500 AS decremento_salario,
+    salario * 2 AS multiplica_salario,
+    salario / 2 AS divide_salario,
+    salario % 10 AS modulo_salario
+FROM empleados;

@@ -96,3 +96,17 @@ SELECT
     pais,
     email
 FROM empleados;
+
+--Uso de AS para alias de columna
+SELECT nombre, 
+    apellido AS apellido_paterno
+FROM empleados;
+
+--Usar constantes para "nuevas" columnas. La columna NO se crea en la tabla
+SELECT 
+    nombre,
+    apellido,
+    5 AS numero, 
+    'Zophia' AS empresa,
+    DATE '2020-01-01' AS fecha_ingreso    
+FROM empleados;
