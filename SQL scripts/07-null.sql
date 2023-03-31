@@ -1,62 +1,73 @@
 -- NULL nos sirve para identificar valores ausentes
-SELECT * FROM;
+SELECT * FROM instructores;
 
 -- Esto no funciona
 SELECT *
-FROM
+FROM instructores
 WHERE = NULL;
 
 -- IS NULL es la manera correcta
 SELECT *
-FROM
-WHERE IS NULL;
+FROM instructores
+WHERE incremento IS NULL;
 
 -- Podemos usar también IS NOT NULL
 SELECT *
-FROM
-WHERE IS NOT NULL;
+FROM instructores
+WHERE incremento IS NOT NULL;
 
 -- NULL tiene un efecto en ORDER BY
 SELECT *
-FROM
-ORDER BY;
+FROM instructores
+ORDER BY incremento;
 
 SELECT *
-FROM empleados
-ORDER BY nombre NULLS FIRST;
+FROM instructores
+ORDER BY incremento NULLS FIRST;
 
 SELECT *
-FROM empleados
-ORDER BY nombre NULLS LAST;
+FROM instructores
+ORDER BY nombre, incremento NULLS LAST;
 
 -- El orden importa si se usa NULLS FIRST/LAST CON ASC/DESC
 SELECT *
-FROM empleados
-ORDER BY nombre DESC NULLS LAST;
+FROM instructores
+ORDER BY incremento DESC NULLS LAST;
 
+--Orden incorrecto
 SELECT *
-FROM empleados
-ORDER BY nombre NULLS LAST DESC;
+FROM instructores
+ORDER BY incremento NULLS LAST DESC;
 
 -- NULL y operadores
 SELECT NULL + 5 AS suma_null;
 
-SELECT 
-FROM
-WHERE suma > NULL;
+-- Esto no funciona
+SELECT *
+FROM instructores
+WHERE incremento > NULL;
 
-SELECT 
-FROM
-WHERE suma > 500;
+SELECT nombre,
+    incremento
+FROM instructores
+WHERE incremento > 0.10;
 
-SELECT 
-FROM
-WHERE suma < 500;
+SELECT nombre,
+    incremento
+FROM instructores
+WHERE incremento < 0.15;
 
-SELECT 
-FROM
-WHERE IN (NULL, '');
+-- Esto no funciona
+SELECT *
+FROM instructores
+WHERE incremento IN (NULL, 0.10);
 
-SELECT
-FROM
-WHERE BETWEEN NULL AND 50;
+SELECT *
+FROM instructores
+WHERE incremento IS NULL 
+	OR incremento = 0.10;
+
+-- Tampoco funciona esto
+SELECT *
+FROM instructores
+WHERE incremento BETWEEN NULL AND 0.15;
