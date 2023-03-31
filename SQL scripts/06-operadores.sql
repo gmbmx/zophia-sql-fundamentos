@@ -6,7 +6,7 @@ SELECT nombre,
     departamento
 FROM empleados
 WHERE departamento
-     IN ('', '', '');
+     IN ('Finanzas', 'Comercial');
 
 --IN puede usarse con cualquier tipo de dato
 SELECT nombre,
@@ -21,9 +21,8 @@ SELECT nombre,
     apellido,
     departamento
 FROM empleados
-WHERE departamento = '' 
-    OR departamento = '' 
-    OR departamento = '';
+WHERE departamento = 'Finanzas' 
+    OR departamento = 'Comercial';
 
 -- Operador Between nos permite buscar por rangos
 SELECT nombre,
@@ -51,7 +50,7 @@ SELECT nombre,
     apellido,
     departamento
 FROM empleados
-WHERE departamento NOT IN ('','','');
+WHERE departamento NOT IN ('Finanzas','Comercial');
 
 SELECT nombre,
     apellido,
