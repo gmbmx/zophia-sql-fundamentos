@@ -67,3 +67,8 @@ SELECT *
 FROM empleados
 ORDER BY departamento 
     DESC nombre;
+	
+--No incluir el campo de ORDER BY en SELECT
+SELECT nombre
+FROM empleados
+ORDER BY departamento;

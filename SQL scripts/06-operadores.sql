@@ -104,7 +104,7 @@ SELECT
     salario - 500,
     salario * 2,
     salario / 2,
-    salario % 10
+    salario % 10 -- Módulo o cociente de la división
 FROM empleados;
 
 --Usamos alias para nombrar las nuevas columnas

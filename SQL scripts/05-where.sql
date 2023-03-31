@@ -1,21 +1,21 @@
 --WHERE nos permite filtrar bajo múltiples posibles condiciones mediante el uso de operadores
 SELECT *
 FROM empleados
-WHERE nombre = '';
+WHERE nombre = 'Raul';
 
 --Si el campo es de tipo string (VARCHAR, CHAR, TEXT) recuerda que compara case sensitive
 SELECT *
 FROM empleados
-WHERE nombre = '';
+WHERE nombre = 'RAUL';
 
---También podemos comparar con otros tipos de datos
+--También podemos filtrar por otros tipos de datos
 SELECT nombre,
     apellido,
     salario
 FROM empleados
 WHERE salario = 10000;
 
---También podemos comparar lo que es diferente o no es igual con !=
+--También podemos filtrar lo que es diferente o no es igual con !=
 SELECT nombre,
     apellido,
     salario

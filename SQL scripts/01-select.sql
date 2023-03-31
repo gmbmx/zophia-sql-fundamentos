@@ -46,8 +46,7 @@ SELECT nombre
 FROM empleados;
 
 -- Código limpio, trailing comma
-SELECT 
-    nombre,
+SELECT nombre,
     apellido,
     pais,
     email
@@ -61,8 +60,7 @@ SELECT nombre
 FROM empleados;
 
 -- Trailing comma también
-SELECT 
-    nombre,
+SELECT nombre,
     --apellido,
     pais,
     email
@@ -76,8 +74,7 @@ SELECT --nombre
 FROM empleados;
 
 -- Si usas trailing comma sólo tendrás que tener cuidado si comentas la última columna
-SELECT 
-    nombre,
+SELECT nombre,
     apellido,
     pais,
     --email
@@ -90,12 +87,28 @@ SELECT nombre
     ,email
 FROM empleados;
 
-SELECT 
-    nombre,
+SELECT nombre,
     apellido
     pais,
     email
 FROM empleados;
+
+--Algunas otras formas de código limpio son
+SELECT 
+    nombre,
+    apellido,
+    pais,
+    email
+FROM
+    empleados;
+
+SELECT 
+      nombre,
+    apellido,
+        pais,
+       email
+FROM
+    empleados;
 
 --Uso de AS para alias de columna
 SELECT nombre, 

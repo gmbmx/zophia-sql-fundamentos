@@ -31,7 +31,7 @@ SELECT DISTINCT departamento,
     DISTINCT nombre
 FROM empleados;
 
---Pensar que DISTINCT es una función
+--DISTINCT en Postgres puede usarse también de esta forma pero falla en otros motores
 SELECT DISTINCT(departamento), nombre
     FROM empleados;
 	
