@@ -91,8 +91,8 @@ FROM empleados;
 -- Quitar caracteres
 SELECT 
 	LTRIM('    cadena', ' ') AS cadena,
-	RTRIM('cadena   p',' ') AS cadena_rtrim,
-	RTRIM('cadena.  p',' p') AS cadena_rtrim_punto,
+	RTRIM('cadena   p', ' ') AS cadena_rtrim,
+	RTRIM('cadena.  p', ' p') AS cadena_rtrim_punto,
 	BTRIM('   cadena  ', ' ') AS cadena_btrim,
 	TRIM(LEADING '  cadena  '),
 	TRIM(TRAILING '  cadena  '),
