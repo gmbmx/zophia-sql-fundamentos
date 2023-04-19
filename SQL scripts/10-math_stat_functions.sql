@@ -80,3 +80,20 @@ SELECT
     DEGREES(1),
     RADIANS(45)
 ;
+
+-- Funciones comunes de Agregación
+SELECT
+    COUNT(*) AS num_empleados,
+    AVG(salario) AS salario_promedio,
+    MAX(salario) AS salario_max,
+    MIN(salario) AS salario_min,
+    SUM(salario) AS salario_total
+FROM empleados;
+
+-- Funciones estadísticas de Agregación
+SELECT
+    CORR(salario, incremento) AS corr_salario_incremento,
+    STDDEV(salario) AS std_dev_salario,
+    VARIANCE(salario) AS var_salario,
+    REGR_COUNT(salario, incremento) AS regr_count_salario_incremento
+FROM empleados;
