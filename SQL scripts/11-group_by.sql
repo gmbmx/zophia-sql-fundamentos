@@ -60,6 +60,14 @@ FROM empleados
 WHERE pais != 'MX'
 GROUP BY departamento, pais;
 
+-- También podemos usar funciones y alias para definir el GROUP BY
+SELECT
+    CONCAT(pais, ' LATAM') AS pais_latam,
+    SUM(salario) AS suma_salario
+FROM empleados
+GROUP BY pais_latam; 
+
+
 -- Es posible usar columnas calculadas en el GROUP BY
 SELECT
     LOWER(pais) AS pais_lower,
