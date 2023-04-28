@@ -85,3 +85,16 @@ WHERE pais <> 'MX'
 GROUP BY pais
 ORDER BY num_empleados DESC
 LIMIT 5;
+
+-- Si usamos GROUP BY debemos aprovechar su funcionalidad
+SELECT
+    departamento,
+    salario
+FROM empleados
+GROUP BY departamento, salario;
+
+-- Aunque es válido usar GROUP BY en lugar de DISTINCT para quitar duplicados, afecta la legibilidad
+SELECT
+    departamento
+FROM empleados
+GROUP BY departamento;
