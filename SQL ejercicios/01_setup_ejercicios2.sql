@@ -1,4 +1,4 @@
-CREATE TABLE ventas (
+CREATE TABLE IF NOT EXISTS ventas (
 	id_curso varchar(6),
 	id_pago int,
 	monto int,
@@ -92,4 +92,33 @@ INSERT INTO ventas VALUES
 	('DA0001', 82, 4000, 'Stripe', DATE '2023/03/10', TRUE),
 	('DA0002', 83, 4000, 'Stripe', DATE '2023/03/10', TRUE),
 	('DE0002', 84, 2000, 'Paypal', DATE '2023/03/10', TRUE),
-	('DE0002', 85, 2000, 'Paypal', DATE '2023/03/10', TRUE);
+	('DE0002', 85, 2000, 'Paypal', DATE '2023/03/10', TRUE),
+	('DA0004', 86, 3000, 'Paypal', DATE '2023/04/12', FALSE),
+	('DA0004', 87, 3000, 'Stripe', DATE '2023/04/12', FALSE),
+	('DA0004', 88, 3000, 'Paypal', DATE '2023/04/14', FALSE),
+	(NULL, 89, 3000, 'Paypal', DATE '2023/04/15', FALSE),
+	(NULL, 90, 3000, 'Stripe', DATE '2023/04/16', FALSE),
+	(NULL, 91, 3000, 'Paypal', DATE '2023/04/18', FALSE),
+	(NULL, 92, 3000, 'Paypal', DATE '2023/04/19', FALSE),
+	;
+
+CREATE TABLE IF NOT EXISTS rechazos (
+	id_curso varchar(6),
+	id_pago int,
+	monto int,
+	metodo_pago varchar(60),
+	fecha_pago date,
+	motivo_rechazo boolean
+);
+
+INSERT INTO rechazos VALUES
+	('DE0001', 1, 4000, 'Paypal', DATE '2023/01/04', 'Declinada por banco emisor'),
+	('DE0001', 10, 4000, 'Paypal', DATE '2023/01/07', 'Declinada por banco emisor'),
+	('DE0002', 21, 6000, 'Paypal', DATE '2023/02/03', 'Declinada por banco emisor'),
+	('DE0002', 21, 6000, 'Stripe', DATE '2023/02/03', 'Declinada por banco emisor'),
+	('DE0002', 21, 6000, 'Paypal', DATE '2023/02/04', 'Saldo insuficiente'),
+	('DE0002', 21, 6000, 'Paypal', DATE '2023/02/04', 'Declinada por banco emisor'),
+	('DA0001', 36, 3500, 'Paypal', DATE '2023/02/10', 'Declinada por banco emisor'),
+	('DA0001', 36, 3500, 'Paypal', DATE '2023/02/11', 'Saldo insuficiente'),
+	('DA0002', 54, 4000, 'Paypal', DATE '2023/02/12', 'Tarjeta no autorizada'),
+	('DA0002', 55, 4000, 'Stripe', DATE '2023/02/12', 'Saldo insuficiente');

@@ -38,12 +38,13 @@ CREATE TABLE cursos (
 );
 
 INSERT INTO cursos(id_empleado, id_curso, nombre_curso, fecha_inicio, fecha_fin, propiedad) VALUES
-	(16, 'DE0001', 'ETL con Apache Spark', DATE '2022/01/10', DATE '2023/03/10', 70),
-	(16, 'DA0001', 'Visualizacion con Tableau', DATE '2022/01/15', DATE '2023/04/01', 70),
-	(17, 'DA0002', 'Estadistica Avanzada', DATE '2022/03/10', DATE '2023/06/10', 60),
-	(18, 'DA0002', 'Estadistica Avanzada', DATE '2022/03/10', DATE '2023/06/10', 40),
-	(19, 'DE0002', 'Arquitecturas de Datos', DATE '2022/04/01', DATE '2023/07/01', 100),
-	(20, 'DE0001', 'ETL con Apache Spark', DATE '2022/01/10', DATE '2023/03/10', 30),
-	(20, 'DA0001', 'Visualizacion con Tableau', DATE '2022/01/15', DATE '2023/04/01', 30),
-	(20, 'DA0003', 'Analisis de Marketing Digital', DATE '2022/04/10', DATE '2023/06/15', 100),
-	(22, 'DE0003', 'Streaming con Apache Kafka', DATE '2022/05/10', DATE '2023/07/15', 100);
+	(16, 'DE0001', 'ETL con Apache Spark', DATE '2023/01/10', DATE '2023/03/10', 70),
+	(16, 'DA0001', 'Visualizacion con Tableau', DATE '2023/01/15', DATE '2023/04/01', 70),
+	(17, 'DA0002', 'Estadistica Avanzada', DATE '2023/03/10', DATE '2023/06/10', 60),
+	(18, 'DA0002', 'Estadistica Avanzada', DATE '2023/03/10', DATE '2023/06/10', 40),
+	(19, 'DE0002', 'Arquitecturas de Datos', DATE '2023/04/01', DATE '2023/07/01', 100),
+	(20, 'DE0001', 'ETL con Apache Spark', DATE '2023/01/10', DATE '2023/03/10', 30),
+	(20, 'DA0001', 'Visualizacion con Tableau', DATE '2023/01/15', DATE '2023/04/01', 30),
+	(20, 'DA0003', 'Analisis de Marketing Digital', DATE '2023/04/10', DATE '2023/06/15', 100),
+	(22, 'DE0003', 'Streaming con Apache Kafka', DATE '2023/05/10', DATE '2023/07/15', 100),
+	(17, 'DA0005', 'Fundamentos de SQL', DATE '2023/06/01', NULL, 100);
