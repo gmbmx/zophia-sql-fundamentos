@@ -27,6 +27,8 @@ INSERT INTO instructores VALUES
 	(21, 'Nadia', 'Cuevas', 'PE', 'nadia.cuevas@zophia.io', 20000, 0.20, DATE '2023/03/01', 'Instructor', 'Descripcion', TRUE, TIMESTAMP '2022/03/04 10:32:45')		
 ;
 
+DROP TABLE IF EXISTS cursos;
+
 CREATE TABLE cursos (
 	id_empleado int,
 	id_curso varchar(6),

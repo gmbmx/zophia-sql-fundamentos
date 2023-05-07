@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS ventas;
+
 CREATE TABLE IF NOT EXISTS ventas (
 	id_curso varchar(6),
 	id_pago int,
@@ -99,7 +101,7 @@ INSERT INTO ventas VALUES
 	(NULL, 89, 3000, 'Paypal', DATE '2023/04/15', FALSE),
 	(NULL, 90, 3000, 'Stripe', DATE '2023/04/16', FALSE),
 	(NULL, 91, 3000, 'Paypal', DATE '2023/04/18', FALSE),
-	(NULL, 92, 3000, 'Paypal', DATE '2023/04/19', FALSE),
+	(NULL, 92, 3000, 'Paypal', DATE '2023/04/19', FALSE)
 	;
 
 CREATE TABLE IF NOT EXISTS rechazos (
