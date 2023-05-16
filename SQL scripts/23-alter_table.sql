@@ -27,6 +27,9 @@ RENAME TO empleado;
 ALTER TABLE empleado;
 RENAME antiguedad TO fecha_ingreso;
 
+ALTER TABLE IF EXISTS empleado
+RENAME TO empleados;
+
 -- RENAME no permite cambiar el nombre a varias columnas en una misma sentencia
 ALTER TABLE empleado;
 RENAME nombre TO nombre_empleado,
