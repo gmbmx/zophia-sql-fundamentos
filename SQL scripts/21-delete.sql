@@ -3,19 +3,21 @@ SELECT *
 FROM empleados
 WHERE id_empleado = 17;
 
-DELETE
-FROM empleados
+DELETE FROM empleados
 WHERE id_empleado = 17
 RETURNING *;
 
 -- Para saber cuántas filas afectaremos con DELETE es bueno hacer un COUNT
 SELECT COUNT(*)
 FROM empleados
-WHERE id_empleado > 15
+WHERE id_empleado >= 29
 
-DELETE
-FROM empleados
-WHERE id_empleado > 15
+DELETE FROM empleados
+WHERE id_empleado >= 29
+
+-- Podemos usar subqueries para DELETE
+DELETE FROM empleados
+WHERE id_empleado IN(SELECT id_empleado FROM instructores);
 
 -- Si no usamos ninguna condición se borrará toda la tabla
 DELETE

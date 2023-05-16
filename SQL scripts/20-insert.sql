@@ -24,7 +24,7 @@ VALUES
 
 -- Podemos insertar una sóla fila
 INSERT INTO empleados(id_empleado, nombre, apellido, pais, email, salario, antiguedad)
-VALUES (16, 'Oscar', 'Mendoza', 'CO', 'oscar.mendoza@zophia.io', 40000, DATE '2023/03/01');
+VALUES (29, 'Oscar', 'Mendoza', 'CO', 'oscar.mendoza@zophia.io', 40000, DATE '2023/03/01');
 
 -- RETURNING es una cláusula opcional que nos regresa la información de las filas insertadas
 INSERT INTO empleados(id_empleado, nombre, apellido, pais, email, salario, antiguedad)
