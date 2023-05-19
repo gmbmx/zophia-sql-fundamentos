@@ -33,11 +33,11 @@ FROM empleados;
 
 --DISTINCT en Postgres puede usarse también de esta forma pero falla en otros motores
 SELECT DISTINCT(departamento), nombre
-    FROM empleados;
+FROM empleados;
 	
 --Pensar que podemos aplicar DISTINCT sólo a una columna
 SELECT departamento, DISTINCT nombre
-    FROM empleados;
+FROM empleados;
 
 -- Orden equivocado genera resultado erróneo
 SELECT departamento DISTINCT
