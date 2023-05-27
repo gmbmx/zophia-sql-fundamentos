@@ -104,23 +104,25 @@ INSERT INTO ventas VALUES
 	(NULL, 92, 3000, 'Paypal', DATE '2023/04/19', FALSE)
 	;
 
+DROP TABLE IF EXISTS rechazos;
+
 CREATE TABLE IF NOT EXISTS rechazos (
 	id_curso varchar(6),
 	id_pago int,
 	monto int,
 	metodo_pago varchar(60),
-	fecha_pago date,
-	motivo_rechazo boolean
+	fecha_pago timestamp,
+	motivo_rechazo text
 );
 
 INSERT INTO rechazos VALUES
-	('DE0001', 1, 4000, 'Paypal', DATE '2023/01/04', 'Declinada por banco emisor'),
-	('DE0001', 10, 4000, 'Paypal', DATE '2023/01/07', 'Declinada por banco emisor'),
-	('DE0002', 21, 6000, 'Paypal', DATE '2023/02/03', 'Declinada por banco emisor'),
-	('DE0002', 21, 6000, 'Stripe', DATE '2023/02/03', 'Declinada por banco emisor'),
-	('DE0002', 21, 6000, 'Paypal', DATE '2023/02/04', 'Saldo insuficiente'),
-	('DE0002', 21, 6000, 'Paypal', DATE '2023/02/04', 'Declinada por banco emisor'),
-	('DA0001', 36, 3500, 'Paypal', DATE '2023/02/10', 'Declinada por banco emisor'),
-	('DA0001', 36, 3500, 'Paypal', DATE '2023/02/11', 'Saldo insuficiente'),
-	('DA0002', 54, 4000, 'Paypal', DATE '2023/02/12', 'Tarjeta no autorizada'),
-	('DA0002', 55, 4000, 'Stripe', DATE '2023/02/12', 'Saldo insuficiente');
+	('DE0001', 1, 4000, 'Paypal', TIMESTAMP '2023/01/04 10:23:45', 'Declinada por banco emisor'),
+	('DE0001', 10, 4000, 'Paypal', TIMESTAMP '2023/01/07 22:45:56', 'Declinada por banco emisor'),
+	('DE0002', 21, 6000, 'Paypal', TIMESTAMP '2023/02/03 04:43:21', 'Declinada por banco emisor'),
+	('DE0002', 21, 6000, 'Stripe', TIMESTAMP '2023/02/03 11:23:05', 'Declinada por banco emisor'),
+	('DE0002', 21, 6000, 'Paypal', TIMESTAMP'2023/02/04 10:16:45', 'Saldo insuficiente'),
+	('DE0002', 21, 6000, 'Paypal', TIMESTAMP '2023/02/04 17:32:31' , NULL),
+	('DA0001', 36, 3500, 'Paypal', TIMESTAMP '2023/02/10 08:44:23', NULL),
+	('DA0001', 36, 3500, 'Paypal', TIMESTAMP '2023/02/11 21:13:57', 'Saldo insuficiente'),
+	('DA0002', 54, 4000, 'Paypal', TIMESTAMP '2023/02/12 10:46:18', 'Tarjeta no autorizada'),
+	('DA0002', 55, 4000, 'Stripe', TIMESTAMP '2023/02/12 23:17:22', 'Saldo insuficiente');
