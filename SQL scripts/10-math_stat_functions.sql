@@ -69,7 +69,7 @@ SELECT
     PI()
 ;
 
--- Funciones trginométricas
+-- Funciones trigonométricas
 SELECT
     SIN(1),
     SIND(30),
