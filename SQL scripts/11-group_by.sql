@@ -1,4 +1,4 @@
--- GROUP BY  es una snetencia muy importante que nos permite realizar agregaciones por grupo
+-- GROUP BY  es una sentencia muy importante que nos permite realizar agregaciones por grupo
 SELECT 
     COUNT(*) AS num_empleados,
     departamento
